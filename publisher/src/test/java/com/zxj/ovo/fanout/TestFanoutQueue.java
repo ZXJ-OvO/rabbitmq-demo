@@ -24,5 +24,4 @@ public class TestFanoutQueue {
         String message = "test fanout exchange";
         rabbitTemplate.convertAndSend(exchangeName, "", message);
     }
-
 }

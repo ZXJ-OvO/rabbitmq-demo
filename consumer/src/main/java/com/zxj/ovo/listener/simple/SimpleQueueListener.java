@@ -1,4 +1,4 @@
-package com.zxj.ovo.listener.basic;
+package com.zxj.ovo.listener.simple;
 
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -9,6 +9,6 @@ public class SimpleQueueListener {
 
     @RabbitListener(queues = "simple.queue")
     public void receive(String msg) {
-        System.out.println("SimpleQueueListener收到消息：" + msg);
+        System.out.println("消费者接收到simple.queue的消息：" + msg);
     }
 }

@@ -12,11 +12,12 @@ import javax.annotation.Resource;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestSimpleQueue {
+
     @Resource
     private RabbitTemplate rabbitTemplate;
 
     @Test
-    public void receive() {
+    public void send() {
         // 队列名称
         String queueName = "simple.queue";
         // 消息

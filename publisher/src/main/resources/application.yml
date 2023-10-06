@@ -13,3 +13,8 @@ spring:
     listener:
       simple:
         prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息
+
+    publisher-confirm-type: correlated  # 开启发送者确认，correlated 异步回调
+    publisher-returns: true   # 开启发送者回执
+    template:
+      mandatory: true  # 定义消息路由失败时的策略。true，则调用ReturnCallback；false：则直接丢弃消息
